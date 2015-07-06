@@ -68820,8 +68820,8 @@ angular.module('app')
 
       // config
       $scope.app = {
-        name: 'Angulr',
-        version: '2.0.2',
+        name: 'Interview Standards',
+        version: '1.0.0',
         // for chart colors
         color: {
           primary: '#7266ba',
@@ -68835,11 +68835,11 @@ angular.module('app')
         },
         settings: {
           themeID: 1,
-          navbarHeaderColor: 'bg-black',
-          navbarCollapseColor: 'bg-white-only',
-          asideColor: 'bg-black',
+          navbarHeaderColor: 'bg-info',
+          navbarCollapseColor: 'bg-dark',
+          asideColor: 'bg-light',
           headerFixed: true,
-          asideFixed: false,
+          asideFixed: true,
           asideFolded: false,
           asideDock: false,
           container: false
@@ -68847,6 +68847,7 @@ angular.module('app')
       }
 
       // save settings to local storage
+      /*
       if ( angular.isDefined($localStorage.settings) ) {
         $scope.app.settings = $localStorage.settings;
       } else {
@@ -68862,7 +68863,7 @@ angular.module('app')
         // save to local storage
         $localStorage.settings = $scope.app.settings;
       }, true);
-
+      */
       // angular translate
       $scope.lang = { isopen: false };
       $scope.langs = {en:'English', de_DE:'German', it_IT:'Italian'};

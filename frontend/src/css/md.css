@@ -2,6 +2,13 @@
 
 */
 
+/* #7266ba; */
+
+/* #23b7e5; */
+/* #27c24c; */
+
+/* #3a3f51; */
+
 [md-ink-ripple] {
   position: relative;
 }
@@ -1579,7 +1586,7 @@
 .md-input:focus,
 .md-input.focus {
   padding-bottom: 1px;
-  border-color: #7266ba;
+  border-color: #2980b9;
   border-bottom-width: 2px;
 }
 
@@ -1587,7 +1594,7 @@
 .md-input.focus ~ label {
   top: 0 !important;
   font-size: 0.85em !important;
-  color: #7266ba;
+  color: #2980b9;
   opacity: 1;
 }
 
