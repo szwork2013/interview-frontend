@@ -1,0 +1,28 @@
+<div class="bg-light lter b-b wrapper-md">
+  <h1 class="m-n font-thin h3">Activity</h1>
+</div>
+<div class="wrapper-md">
+  <div ui-scroll-viewport class="row" style="height:400px;overflow-y: auto;" >
+      
+      <div class="table-responsive">
+      <table class="table table-striped b-t b-light">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Event</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr ng-repeat="item in items">
+           <td>{{ item.date }}</td>
+           <td>{{ item.description }}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>        
+
+
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="bg-light lter b-b wrapper-md" ng-controller="openPositionsCtrl">
+  <h1 class="m-n font-thin h3 clear">Candidates For {{ position.title }} <button ng-click="openCreateCandidate('md', position)" class="btn btn-primary pull-right">Add Candidate</button></h1>
+</div>
+<div class="wrapper-md">
+  <div class="table-responsive">
+      <table class="table table-striped b-t b-light">
+        <thead>
+          <tr>
+            <th>Candidate Name</th>
+            <th>Position Applied For</th>
+            <th>Interviews Conducted</th>
+            <th>Average Rating</th>
+            <th>Communication</th>
+            <th>Energy</th>
+            <th>Initiative</th>
+            <th>Appearance</th>
+            <th>Knowledgability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="candidate in candidates">
+            <td>{{ candidate.firstName }} {{ candidate.lastName }}</td>
+            <td>{{ position.title }}</td>
+            <td>{{ candidate.interviewsConducted }}</td>
+            <td>{{ candidate.averageRating }}</td>
+            <td>7</td>
+            <td>8</td>
+            <td>6</td>
+            <td>9</td>
+            <td>10</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+</div>

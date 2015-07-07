@@ -68350,10 +68350,10 @@ angular.module('app')
           if(window.location.href.indexOf("material") > 0){
             layout = "tpl/blocks/material.layout.html";
             $urlRouterProvider
-              .otherwise('/app/dashboard-v3');
+              .otherwise('/app/open-positions');
           }else{
             $urlRouterProvider
-              .otherwise('/app/dashboard-v1');
+              .otherwise('/app/open-positions');
           }
           
           $stateProvider
@@ -68361,6 +68361,10 @@ angular.module('app')
                   abstract: true,
                   url: '/app',
                   templateUrl: layout
+              })
+              .state('app.open-positions', {
+                  url: '/open-positions',
+                  templateUrl: 'views/open_positions.html'
               })
               .state('app.dashboard-v1', {
                   url: '/dashboard-v1',
@@ -68835,7 +68839,7 @@ angular.module('app')
         },
         settings: {
           themeID: 1,
-          navbarHeaderColor: 'bg-info',
+          navbarHeaderColor: 'bg-primary',
           navbarCollapseColor: 'bg-dark',
           asideColor: 'bg-light',
           headerFixed: true,

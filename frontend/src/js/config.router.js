@@ -1,5 +1,7 @@
 'use strict';
 
+var API_END_POINT = "http://localhost:8000/api/v1";
+
 /**
  * Config for the router
  */
@@ -31,10 +33,34 @@ angular.module('app')
                   url: '/app',
                   templateUrl: layout
               })
+              /* Begin Interview App */
               .state('app.open-positions', {
                   url: '/open-positions',
-                  templateUrl: 'views/open_positions.html'
+                  templateUrl: 'js/app/interview/views/open_positions.html',
+                  resolve: load(['js/app/interview/controllers/openPositions.js']),
+                  controller: 'openPositionsCtrl'
               })
+
+              .state('app.list-candidates', {
+                  url: '/list-candidates/:positionId',
+                  templateUrl: 'js/app/interview/views/list_candidates.html',
+                  resolve: load([
+                    'js/app/interview/controllers/listCandidates.js',
+                    'js/app/interview/controllers/openPositions.js',
+                    'js/app/interview/services/positions.js'
+                    ]),
+                  controller: 'listCandidatesCtrl'
+              })
+
+              .state('app.list-activity', {
+                url : '/list-activity',
+                templateUrl: 'js/app/interview/views/list-activity.html',
+                resolve: load(['js/app/interview/controllers/activity.js']),
+                controller: 'listActivityCtrl'
+              })
+
+              /* End Interview App */
+
               .state('app.dashboard-v1', {
                   url: '/dashboard-v1',
                   templateUrl: 'tpl/app_dashboard_v1.html',

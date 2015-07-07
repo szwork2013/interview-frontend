@@ -5185,3 +5185,9 @@ a.text-#000000:hover {
     background-color: #2980b9;
   }
 }
+
+/* Custom CSS Styles */
+
+.full-width {
+  width: 100%;
+}
